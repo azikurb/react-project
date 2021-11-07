@@ -4,10 +4,12 @@ import './todo-list-item.css';
 
 export default class TodoListItem extends Component {
 
-  
+  constructor() {
+    super();
 
-  onLabelClick() {
-    console.log(`Done: ${this.props.label}`)
+    this.onLabelClick = () => {
+      console.log(`Done: ${this.props.label}`)
+    }; 
   }
 
   render() {
@@ -22,7 +24,7 @@ export default class TodoListItem extends Component {
         <span
           className='todo-list-item-label'
           style={style}
-          onClick={this.onLabelClick.bind(this)}>
+          onClick={this.onLabelClick}>
           {label}
         </span>)
 
